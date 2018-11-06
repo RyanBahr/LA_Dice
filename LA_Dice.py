@@ -6,4 +6,17 @@ class DiceRoller():
             raw_results.append(random.randint(1,6))
         return raw_results
     def combineDice(raw_results):
-        for x in
+        good_results = []
+        for z in raw_results:
+            if raw_results.count(z) == 1:
+                good_results.append(z)
+            elif raw_results.count(z) > 1:
+                good_results.append(z+1)
+                raw_results.remove(z)
+        if len(good_results) != len(set(good_results)):
+           return DiceRoller.combineDice(good_results)
+        else:
+            return good_results
+            #return "%s is good_results, %s is raw_results" % (good_results, raw_results)
+
+print(DiceRoller.combineDice([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,]))
