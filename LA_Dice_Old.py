@@ -4,6 +4,7 @@ results_raw = []
 results_printer = []
 results_list = []
 x = int(input("How many dice do you wish to roll?"))
+print (x)
 for i in range(0,x):
     results_raw.append(random.randint(1,6))
 results_printer = results_raw
@@ -16,5 +17,5 @@ for i in results_printer:
                 results_printer.remove(j)
         results_list.append(results_printer)
     else:
+        return results_list
         print(results_list)
-        print("I'm Mister Meeseeks, look at me!")
