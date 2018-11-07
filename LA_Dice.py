@@ -17,6 +17,3 @@ class DiceRoller():
            return DiceRoller.combineDice(good_results)
         else:
             return good_results
-            #return "%s is good_results, %s is raw_results" % (good_results, raw_results)
-
-print(DiceRoller.combineDice([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,]))
