@@ -2,6 +2,12 @@ import random
 import math
 from itertools import product
 
+def checkduplicates(aList):
+    if count(aList) == count(set(aList)):
+        return True
+    else:
+        return False
+
 class DiceRoller():
     def listMaker(raw_results): #makes a list of all first-level combinations given a set of dice
         all_results = []
